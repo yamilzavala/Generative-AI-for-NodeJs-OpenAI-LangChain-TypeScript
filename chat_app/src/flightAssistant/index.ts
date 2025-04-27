@@ -103,6 +103,12 @@ async function callOpenAIWithTools() {
         if(toolName === 'reserveFlight') {
             const rawArgument = toolCall.function.arguments;
             const parsedArgument = JSON.parse(rawArgument);
+
+            if (!parsedArgument.flightID && parsedArgument.origin) {
+                parsedArgument.flightID = parsedArgument.origin;
+                delete parsedArgument.origin;
+            }
+
             const toolResponse = reserveFlight(parsedArgument.flightID);
             context.push(response.choices[0].message)
             context.push({
