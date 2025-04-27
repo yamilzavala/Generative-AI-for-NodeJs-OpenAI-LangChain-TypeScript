@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "node -r ts-node/register  --env-file=.env  src/tools/index.ts"
+    "start": "node -r ts-node/register  --env-file=.env  src/flightAssistant/index.ts"
   },
   "keywords": [],
   "author": "",
