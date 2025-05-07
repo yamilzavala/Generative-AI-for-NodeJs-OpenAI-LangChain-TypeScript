@@ -1,12 +1,12 @@
 import { DataWithEmbeddings, generateEmbeddingsFc, loadJSONData } from "./main";
 
 //producto punto a punto
-function dotProduct(a: number[], b: number[]){
+export function dotProduct(a: number[], b: number[]){
     return a.map((el, idx) => el*b[idx]) //multiplica elemento por elemento
             .reduce((a,b) => a+b, 0)     //suma todos los productos
 }
 
-function cosineSimilarity(a:number[], b: number[]) {
+export function cosineSimilarity(a:number[], b: number[]) {
     const product = dotProduct(a, b); //producto punto a punto
     const aMagnitude = Math.sqrt(a.map(val => val * val).reduce((a,b) => a+b, 0)) // ||a||
     const bMagnitude = Math.sqrt(b.map(val => val * val).reduce((a,b) => a+b, 0)) // ||b||
