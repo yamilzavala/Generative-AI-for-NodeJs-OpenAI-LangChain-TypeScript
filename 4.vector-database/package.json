@@ -1,0 +1,23 @@
+{
+  "name": "embeddings",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node -r ts-node/register --env-file=.env src/chroma/Client.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.11.16",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@pinecone-database/pinecone": "^2.0.1",
+    "axios": "^1.9.0",
+    "chromadb": "^1.8.1",
+    "openai": "^4.26.0"
+  }
+}
