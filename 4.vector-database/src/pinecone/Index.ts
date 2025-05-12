@@ -77,10 +77,10 @@ async function queryVectors() {
 
 
 async function main(){
-    //await createIndex()
+    await createIndex()
     //await listIndex()
     //await upsertVectors();
-    await queryVectors()
+    //await queryVectors()
 }
 
 main();
